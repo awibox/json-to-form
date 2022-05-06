@@ -105,7 +105,14 @@ const Result: React.FC<IProps> = ({data}) => {
           }
         })}
         <Grid item xs={12}>
-          <Stack direction="row" spacing={2}>
+          <Stack
+            direction="row"
+            sx={{
+              borderTop: '1px solid #ddd',
+              paddingTop: '20px',
+              marginTop: '10px'
+            }}
+            spacing={2}>
             {buttons && buttons.map((button: buttonType) => (
               <Button {...button} variant="contained">{button.label}</Button>
             ))}
