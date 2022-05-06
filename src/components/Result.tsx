@@ -89,15 +89,10 @@ const Result: React.FC<IProps> = ({data}) => {
               return (
                 <Grid item xs={8}>
                   <TextField
-                    label={field.label}
-                    type={field.type}
+                    {...field}
                     multiline={field.type === 'textarea'}
-                    defaultValue={field.defaultValue}
                     fullWidth={field.type === 'textarea'}
                     minRows={3}
-                    disabled={field.disabled}
-                    required={field.required}
-                    placeholder={field.placeholder}
                   />
                 </Grid>
               )
